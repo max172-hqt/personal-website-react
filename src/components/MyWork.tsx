@@ -1,5 +1,4 @@
-import DevJane2 from '../assets/images/dev-jane-02.jpg';
-
+import styles from '../assets/styles/my-work.module.css';
 import Portfolio1 from '../assets/images/portfolio-01.jpg';
 import Portfolio2 from '../assets/images/portfolio-02.jpg';
 import Portfolio3 from '../assets/images/portfolio-03.jpg';
@@ -12,32 +11,30 @@ import Portfolio9 from '../assets/images/portfolio-09.jpg';
 import Portfolio10 from '../assets/images/portfolio-10.jpg';
 
 const portfolioList = [
-  Portfolio1, 
+  Portfolio1,
   Portfolio2,
   Portfolio3,
   Portfolio4,
-  Portfolio5, 
-  Portfolio6, 
-  Portfolio7, 
-  Portfolio8, 
-  Portfolio9, 
+  Portfolio5,
+  Portfolio6,
+  Portfolio7,
+  Portfolio8,
+  Portfolio9,
   Portfolio10
 ]
 
 export default function MyWork() {
   return (
-    <section className="my-work" id="work">
-      <h2 className="section__title section__title--work">My work</h2>
-      <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
-      
-      <div className="portfolio">
-        {portfolioList.map((item) => {
-          return (
-            <a href="#" className="portfolio__item">
-              <img src={item} alt="" className="portfolio__img" />
-            </a>
-          )
-        })}
+    <section className={styles['my-work']} id="work">
+      <h2 className={`section__title section__title--work ${styles.title}`}>My work</h2>
+      <p className={`section__subtitle section__subtitle--work ${styles.subtitle}`}>A selection of my range of work</p>
+
+      <div className={styles.portfolio}>
+        {portfolioList.map((item) => (
+          <a href="#" className={styles.item}>
+            <img src={item} alt="" className={styles.img} />
+          </a>
+        ))}
       </div>
     </section>
   )
