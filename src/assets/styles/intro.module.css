@@ -1,0 +1,36 @@
+.intro {
+  position: relative;
+}
+
+.img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;  
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+    grid-gap: 1em;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  .img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+  }
+
+  .subtitle {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
+}
