@@ -1,0 +1,30 @@
+.footer {
+  background: var(--clr-dark);
+  color: var(--clr-accent);
+  text-align: center;
+}
+
+.email {
+  text-decoration: none;
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+  display: block;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  padding-bottom: 2em;
+  margin: 0;
+}
+
+.item + .item {
+  margin-left: 1em;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--clr-accent);
+}

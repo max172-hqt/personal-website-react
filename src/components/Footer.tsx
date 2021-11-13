@@ -1,24 +1,29 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faHeadSideCough, faHeadset, faHdd } from '@fortawesome/free-solid-svg-icons'
+import styles from '../assets/styles/footer.module.css';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const socialMediaMapping = [
-  { link: "https://codepen.io", icon: faCoffee},
-  { link: "https://instagram.com", icon: faHeadSideCough},
-  { link: "https://twitter.com", icon: faHdd},
-  { link: "https://github.com", icon: faHeadset},
+  { link: "https://instagram.com", icon: GitHubIcon },
+  { link: "https://twitter.com", icon: TwitterIcon },
+  { link: "https://github.com", icon: InstagramIcon },
 ]
 
 export default function Footer() {
   return (
-    <footer className="footer">
-        <FontAwesomeIcon icon="coffee" size="xs" />
-      <a href="mailto:hello@jane.dev" className="footer__link">email@gmail.com</a>
-      <ul className="social-list">
-        {socialMediaMapping.map(({link, icon}) => (
-          <li className="social-list__item">
-              <a className="social-list__link" href={link}>
-                <FontAwesomeIcon icon={icon} />
-              </a>
+    <footer className={styles.footer}>
+      <a 
+        href="mailto:hello@jane.dev" 
+        className={styles.email}
+      >
+        hello@devjane.com
+      </a>
+      <ul className={styles.list}>
+        {socialMediaMapping.map(({ link, icon: Icon }) => (
+          <li className={styles.item}>
+            <a className={styles.link} href={link}>
+              <Icon />
+            </a>
           </li>
         ))}
       </ul>
