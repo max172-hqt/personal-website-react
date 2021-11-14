@@ -31,7 +31,7 @@ export default function MyWork() {
 
       <div className={styles.portfolio}>
         {portfolioList.map((item) => (
-          <a href="#" className={styles.item}>
+          <a href="#work" className={styles.item}>
             <img src={item} alt="" className={styles.img} />
           </a>
         ))}

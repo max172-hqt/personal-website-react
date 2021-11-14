@@ -36,6 +36,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* General styles  */
 body {
   background: var(--clr-light);
