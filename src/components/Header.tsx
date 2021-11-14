@@ -26,10 +26,10 @@ export default function Header() {
       <div className={styles.logo}>
         <img src={Logo} alt="" />
       </div>
+      <button className={styles.toggle} aria-label="toggle navigation">
+        <span className={styles.hamburger}></span>
+      </button>
       <nav className={styles.nav}>
-        <button className={styles.toggle} aria-label="toggle navigation">
-          <span className={styles.hamburger}></span>
-        </button>
         <ul className={styles.navList}>
           {navItems.map(({href, text}) => (
             <li className={styles.navItem}>
