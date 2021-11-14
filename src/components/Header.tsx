@@ -1,23 +1,43 @@
-import Logo from '../assets/images/devjane.png';
-import styles from '../assets/styles/nav.module.css';
+import Logo from "../assets/images/devjane.png";
+import styles from "../assets/styles/nav.module.css";
+
+const navItems = [
+  {
+    href: "#home",
+    text: "Home",
+  },
+  {
+    href: "#services",
+    text: "My Services",
+  },
+  {
+    href: "#about",
+    text: "About Me",
+  },
+  {
+    href: "#work",
+    text: "My Work",
+  },
+]
 
 export default function Header() {
   return (
-    <header>
-      <div className="logo">
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <img src={Logo} alt="" />
-        <button className="nav-toggle" aria-label="toggle navigation">
-          <span className="hamburger"></span>
-        </button>
-        <nav className={styles.nav}>
-          <ul className="nav__list">
-            <li className="nav__item"><a href="#home">Home</a></li>
-            <li className="nav__item"><a href="#services">My Services</a></li>
-            <li className="nav__item"><a href="#">About Me</a></li>
-            <li className="nav__item"><a href="#">My Work</a></li>
-          </ul>
-        </nav>
       </div>
+      <nav className={styles.nav}>
+        <button className={styles.toggle} aria-label="toggle navigation">
+          <span className={styles.hamburger}></span>
+        </button>
+        <ul className={styles.navList}>
+          {navItems.map(({href, text}) => (
+            <li className={styles.navItem}>
+              <a className={styles.navLink} href={href}>{text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
-  )
+  );
 }
