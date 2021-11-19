@@ -120,11 +120,10 @@
     left: 0;
     right: 0;
     z-index: 100;
-  
-    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
   }
   
   .navOpen {
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
     transform: translateX(0%);
   }
   

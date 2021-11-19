@@ -20,6 +20,7 @@ const navItems = [
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
+  console.log(navOpen)
 
   const handleToggleNav = () => {
     setNavOpen(!navOpen);
@@ -55,7 +56,7 @@ export default function Header() {
                     borderBottom: isActive ? "2px solid var(--clr-accent)" : 0,
                   }
                 }}
-                onClick={handleToggleNav}
+                onClick={() => setNavOpen(false)}
               >
                 {text}
               </NavLink> 
