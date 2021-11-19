@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src={Logo} alt="" />
+        <NavLink to="/">Huy Tran</NavLink>
       </div>
       <button
         onClick={handleToggleNav}
@@ -51,7 +51,8 @@ export default function Header() {
                 className={styles.navLink}
                 style={({ isActive}) => {
                   return {
-                    color: isActive ? "var(--clr-accent)" : ""
+                    color: isActive ? "var(--clr-accent)" : "",
+                    borderBottom: isActive ? "2px solid var(--clr-accent)" : 0,
                   }
                 }}
                 onClick={handleToggleNav}

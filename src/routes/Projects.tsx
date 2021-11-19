@@ -1,5 +1,10 @@
+import Header from '../components/Header';
+
 export default function Projects() {
   return (
-    <h1>This is project page</h1>
+    <main>
+      <Header />
+      <h1>My Project</h1>
+    </main>    
   )
 }
