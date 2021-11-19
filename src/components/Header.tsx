@@ -20,7 +20,6 @@ const navItems = [
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
-  console.log(navOpen)
 
   const handleToggleNav = () => {
     setNavOpen(!navOpen);
