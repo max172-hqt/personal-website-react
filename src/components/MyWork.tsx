@@ -11,39 +11,35 @@ import Portfolio9 from '../assets/images/portfolio-09.jpg'
 import Portfolio10 from '../assets/images/portfolio-10.jpg'
 
 const portfolioList = [
-    Portfolio1,
-    Portfolio2,
-    Portfolio3,
-    Portfolio4,
-    Portfolio5,
-    Portfolio6,
-    Portfolio7,
-    Portfolio8,
-    Portfolio9,
-    Portfolio10,
+  Portfolio1,
+  Portfolio2,
+  Portfolio3,
+  Portfolio4,
+  Portfolio5,
+  Portfolio6,
+  Portfolio7,
+  Portfolio8,
+  Portfolio9,
+  Portfolio10,
 ]
 
 export default function MyWork(): JSX.Element {
-    return (
-        <section className={styles['my-work']} id="work">
-            <h2
-                className={`section__title section__title--work ${styles.title}`}
-            >
-                My work
-            </h2>
-            <p
-                className={`section__subtitle section__subtitle--work ${styles.subtitle}`}
-            >
-                A selection of my range of work
-            </p>
+  return (
+    <section className={styles.myWork} id="work">
+      <h2 className={`sectionTitle sectionTitleWork ${styles.title}`}>
+        My work
+      </h2>
+      <p className={`sectionSubtitle sectionSubtitleWork ${styles.subtitle}`}>
+        A selection of my range of work
+      </p>
 
-            <div className={styles.portfolio}>
-                {portfolioList.map(item => (
-                    <a href="#work" className={styles.item} key={item}>
-                        <img src={item} alt="" className={styles.img} />
-                    </a>
-                ))}
-            </div>
-        </section>
-    )
+      <div className={styles.portfolio}>
+        {portfolioList.map(item => (
+          <a href="#work" className={styles.item} key={item}>
+            <img src={item} alt="" className={styles.img} />
+          </a>
+        ))}
+      </div>
+    </section>
+  )
 }

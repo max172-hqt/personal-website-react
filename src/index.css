@@ -10,22 +10,18 @@
 :root {
   --ff-primary: 'Roboto', san-serif;
   --ff-secondary: 'Source Code Pro', monospace;
-
   --fw-reg: 300;
   --fw-med: 500;
   --fw-bold: 900;
-
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
-
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-
-  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-        0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+  --bs: 0.25em 0.25em 0.75em rgb(0 0 0 / 25%),
+    0.125em 0.125em 0.25em rgb(0 0 0 / 15%);
 }
 
 @media (min-width: 800px) {
@@ -73,30 +69,38 @@ h3 {
   line-height: 1;
 }
 
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
+h1 {
+  font-size: var(--fs-h1);
+}
 
-.section__title {
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+.sectionTitle {
   /* em: Relative to font size */
   margin-bottom: 0.25em;
 }
 
-.section__title--intro {
+.sectionTitleIntro {
   font-weight: var(--fw-reg);
 }
 
-.section__title--intro strong {
+.sectionTitleIntro strong {
   display: block;
 }
 
-.section__subtitle {
+.sectionSubtitle {
   margin: 0;
   font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.sectionSubtitleIntro,
+.sectionSubtitleAbout {
   background: var(--clr-accent);
   font-family: var(--ff-secondary);
   margin-bottom: 1em;

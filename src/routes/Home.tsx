@@ -6,14 +6,14 @@ import MyWork from '../components/MyWork'
 import Footer from '../components/Footer'
 
 export default function Home(): JSX.Element {
-    return (
-        <main>
-            <Header />
-            <Introduction />
-            <MyServices />
-            <About />
-            <MyWork />
-            <Footer />
-        </main>
-    )
+  return (
+    <main>
+      <Header />
+      <Introduction />
+      <MyServices />
+      <About />
+      <MyWork />
+      <Footer />
+    </main>
+  )
 }

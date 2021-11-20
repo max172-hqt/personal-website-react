@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -27,6 +29,7 @@
     "lint": "eslint src --color",
     "typescript": "tsc --project tsconfig.json --noEmit",
     "prettier": "prettier src -check",
+    "stylint": "stylelint '**/*.css' --fix",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
     "prepare": "husky install"
@@ -52,8 +55,6 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
-    "eslint": "^8.2.0",
-    "eslint-plugin-react": "^7.27.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.0.3",
     "prettier": "^2.4.1",
