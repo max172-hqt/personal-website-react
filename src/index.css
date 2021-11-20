@@ -8,10 +8,11 @@
 
 /* Custom properties */
 :root {
-  --ff-primary: 'Source Sans Pro', san-serif;
+  --ff-primary: 'Roboto', san-serif;
   --ff-secondary: 'Source Code Pro', monospace;
 
   --fw-reg: 300;
+  --fw-med: 500;
   --fw-bold: 900;
 
   --clr-light: #fff;

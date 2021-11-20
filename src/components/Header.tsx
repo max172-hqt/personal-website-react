@@ -1,23 +1,20 @@
 import { useState } from "react";
 import Logo from "../assets/images/devjane.png";
 import styles from "../assets/styles/nav.module.css";
+import { NavLink } from "react-router-dom";
 
 const navItems = [
   {
-    href: "#home",
     text: "Home",
+    to: "/",
   },
   {
-    href: "#services",
-    text: "My Services",
+    text: "My Resume",
+    to: "/resume",
   },
   {
-    href: "#about",
-    text: "About Me",
-  },
-  {
-    href: "#work",
-    text: "My Work",
+    text: "My Projects",
+    to: "/projects",
   },
 ];
 
@@ -31,7 +28,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src={Logo} alt="" />
+        <NavLink to="/">Huy Tran</NavLink>
       </div>
       <button
         onClick={handleToggleNav}
@@ -47,15 +44,21 @@ export default function Header() {
         }`}
       >
         <ul className={styles.navList}>
-          {navItems.map(({ href, text }) => (
-            <li className={styles.navItem}>
-              <a
-                onClick={handleToggleNav}
+          {navItems.map(({ text, to }) => (
+            <li className={styles.navItem} key={text}>
+              <NavLink 
+                to={to}
                 className={styles.navLink}
-                href={href}
+                style={({ isActive}) => {
+                  return {
+                    color: isActive ? "var(--clr-accent)" : "",
+                    borderBottom: isActive ? "2px solid var(--clr-accent)" : 0,
+                  }
+                }}
+                onClick={() => setNavOpen(false)}
               >
                 {text}
-              </a>
+              </NavLink> 
             </li>
           ))}
         </ul>
