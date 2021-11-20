@@ -1,29 +1,28 @@
-import { useState } from "react";
-import Logo from "../assets/images/devjane.png";
-import styles from "../assets/styles/nav.module.css";
-import { NavLink } from "react-router-dom";
+import { useState } from 'react'
+import styles from '../assets/styles/nav.module.css'
+import { NavLink } from 'react-router-dom'
 
 const navItems = [
   {
-    text: "Home",
-    to: "/",
+    text: 'Home',
+    to: '/',
   },
   {
-    text: "My Resume",
-    to: "/resume",
+    text: 'My Resume',
+    to: '/resume',
   },
   {
-    text: "My Projects",
-    to: "/projects",
+    text: 'My Projects',
+    to: '/projects',
   },
-];
+]
 
-export default function Header() {
-  const [navOpen, setNavOpen] = useState(false);
+export default function Header(): JSX.Element {
+  const [navOpen, setNavOpen] = useState(false)
 
   const handleToggleNav = () => {
-    setNavOpen(!navOpen);
-  };
+    setNavOpen(!navOpen)
+  }
 
   return (
     <header className={styles.header}>
@@ -32,7 +31,7 @@ export default function Header() {
       </div>
       <button
         onClick={handleToggleNav}
-        className={`${styles.toggle} ${navOpen ? styles.toggleOpen : ""}`}
+        className={`${styles.toggle} ${navOpen ? styles.toggleOpen : ''}`}
         aria-label="toggle navigation"
       >
         <span className={styles.hamburger}></span>
@@ -46,23 +45,23 @@ export default function Header() {
         <ul className={styles.navList}>
           {navItems.map(({ text, to }) => (
             <li className={styles.navItem} key={text}>
-              <NavLink 
+              <NavLink
                 to={to}
                 className={styles.navLink}
-                style={({ isActive}) => {
+                style={({ isActive }) => {
                   return {
-                    color: isActive ? "var(--clr-accent)" : "",
-                    borderBottom: isActive ? "2px solid var(--clr-accent)" : 0,
+                    color: isActive ? 'var(--clr-accent)' : '',
+                    borderBottom: isActive ? '2px solid var(--clr-accent)' : 0,
                   }
                 }}
                 onClick={() => setNavOpen(false)}
               >
                 {text}
-              </NavLink> 
+              </NavLink>
             </li>
           ))}
         </ul>
       </nav>
     </header>
-  );
+  )
 }

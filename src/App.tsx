@@ -1,10 +1,10 @@
-import { Routes, Route } from "react-router";
-import Home from "./routes/Home";
-import Resume from "./routes/Resume";
-import Projects from "./routes/Projects";
-import NotFound from "./routes/NotFound";
+import { Routes, Route } from 'react-router'
+import Home from './routes/Home'
+import Resume from './routes/Resume'
+import Projects from './routes/Projects'
+import NotFound from './routes/NotFound'
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <Routes>
@@ -14,7 +14,7 @@ function App() {
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

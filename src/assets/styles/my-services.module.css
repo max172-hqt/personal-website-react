@@ -1,7 +1,7 @@
-.my-services {
+.myServices {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  background-image: url(../images/services-bg.jpg);
+  background-image: url('../images/services-bg.jpg');
   background-size: cover;
   background-blend-mode: darken;
   text-align: center;

@@ -1,11 +1,11 @@
-import Header from '../components/Header';
-import Introduction from '../components/Introduction';
-import MyServices from '../components/MyServices';
-import About from '../components/About';
-import MyWork from '../components/MyWork';
-import Footer from '../components/Footer';
+import Header from '../components/Header'
+import Introduction from '../components/Introduction'
+import MyServices from '../components/MyServices'
+import About from '../components/About'
+import MyWork from '../components/MyWork'
+import Footer from '../components/Footer'
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <main>
       <Header />
@@ -14,6 +14,6 @@ export default function Home() {
       <About />
       <MyWork />
       <Footer />
-    </main>    
+    </main>
   )
 }

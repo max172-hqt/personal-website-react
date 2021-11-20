@@ -8,10 +8,10 @@
 
 @media (min-width: 600px) {
   .intro {
-    display: grid;  
+    display: grid;
     grid-template-areas:
-      "img title"
-      "img subtitle";
+      'img title'
+      'img subtitle';
     grid-template-columns: min-content max-content;
     grid-gap: 1em;
     width: min-content;
