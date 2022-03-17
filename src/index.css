@@ -15,7 +15,8 @@
   --fw-bold: 900;
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #2a8f57;
+  --clr-gray-500: #535661;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -27,7 +28,7 @@
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 3rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -67,6 +68,7 @@ h2,
 h3 {
   margin: 0;
   line-height: 1;
+  font-weight: var(--fw-med);
 }
 
 h1 {
@@ -79,30 +81,4 @@ h2 {
 
 h3 {
   font-size: var(--fs-h3);
-}
-
-.sectionTitle {
-  /* em: Relative to font size */
-  margin-bottom: 0.25em;
-}
-
-.sectionTitleIntro {
-  font-weight: var(--fw-reg);
-}
-
-.sectionTitleIntro strong {
-  display: block;
-}
-
-.sectionSubtitle {
-  margin: 0;
-  font-size: var(--fs-h3);
-}
-
-.sectionSubtitleIntro,
-.sectionSubtitleAbout {
-  background: var(--clr-accent);
-  font-family: var(--ff-secondary);
-  margin-bottom: 1em;
-  padding: 0.25em 0.7em;
 }

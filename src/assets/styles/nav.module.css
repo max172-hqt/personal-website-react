@@ -12,6 +12,13 @@
 .logo a {
   text-decoration: none;
   color: var(--fs-dark);
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: all 100ms ease-in-out;
+}
+
+.logo a:hover {
+  border-bottom: 2px solid var(--clr-dark);
 }
 
 .toggle {
@@ -28,23 +35,33 @@
 .navList {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   margin: 0;
   padding: 0;
+  gap: 3em;
 }
 
 .navLink {
-  color: inherit;
+  color: var(--clr-gray-500);
   text-decoration: none;
   font-weight: var(--fw-med);
 }
 
 .navLink:hover {
-  color: var(--clr-accent);
+  color: var(--clr-dark);
+  border-bottom: 2px solid var(--clr-dark) !important;
 }
 
 @media (max-width: 700px) {
+  .header {
+    padding: 0.25em 0.6em;
+  }
+
+  .logo {
+    font-size: 1.1em;
+  }
+
   .toggle {
     display: block;
     padding: 0.5em;
@@ -107,14 +124,14 @@
   .toggleOpen .hamburger,
   .toggleOpen .hamburger::before,
   .toggleOpen .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-dark);
   }
 
   .nav {
     width: 100%;
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-light);
+    color: var(--clr-dark);
     top: 0;
     bottom: 0;
     left: 0;

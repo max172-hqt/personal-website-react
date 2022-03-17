@@ -8,12 +8,12 @@ const navItems = [
     to: '/',
   },
   {
-    text: 'My Resume',
-    to: '/resume',
+    text: 'Projects',
+    to: '/projects',
   },
   {
-    text: 'My Projects',
-    to: '/projects',
+    text: 'About',
+    to: '/about',
   },
 ]
 
@@ -50,8 +50,10 @@ export default function Header(): JSX.Element {
                 className={styles.navLink}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? 'var(--clr-accent)' : '',
-                    borderBottom: isActive ? '2px solid var(--clr-accent)' : 0,
+                    color: isActive ? 'var(--clr-dark)' : '',
+                    borderBottom: isActive
+                      ? '2px solid var(--clr-dark)'
+                      : 'inherit',
                   }
                 }}
                 onClick={() => setNavOpen(false)}

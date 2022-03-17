@@ -1,10 +1,10 @@
 import Header from '../components/Header'
 
-export default function Resume(): JSX.Element {
+export default function About(): JSX.Element {
   return (
     <main>
       <Header />
-      <h1>Resume page</h1>
+      <h1>About page</h1>
     </main>
   )
 }
